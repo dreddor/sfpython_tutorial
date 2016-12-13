@@ -1,21 +1,22 @@
 Define git aliases, like this alias myAlias:
 git config --global alias.myAlias 'myArgs'
-git myAlias => git myArgs
 
-# Try git log, and then try git grog. :)
-alias.grog log --graph --abbrev-commit --decorate --all --format=format:"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green) (%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)"
+Now invoking "git myAlias" will be the same as invoking "git myArgs"
 
-# List all files under version control in the master branch
-alias.list ls-tree -r master --name-only
+# git grog: try git log, and then try git grog. :)
+git config --global alias.grog 'log --graph --abbrev-commit --decorate --all --format=format:"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green) (%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)"'
 
-# If you want to undo your changes, but stash them for later... git staaash, or just: git stash -all
-alias.staaash stash -all
+# git list: list all files under version control in the master branch
+git config --global alias.list 'ls-tree -r master --name-only'
 
-# Svn-style more compact status
-alias.shorty status --short --branch
+# git staaash: if you want to undo your changes, but stash them for later, or just: git stash -all
+git config --global alias.staaash 'stash -all'
 
-# Stage all files for commit
-alias.addy add -A
+# git shorty: svn-style more compact status
+git config --global alias.shorty 'status --short --branch'
 
-# Get all of your currently defined aliases
-alias.alias config --get-regexp ^alias\.
+# git addy: stage all files for commit
+git config --global alias.addy 'add -A'
+
+# git alias: get all of your currently defined git aliases
+git config --global alias.alias 'config --get-regexp ^alias\.'
