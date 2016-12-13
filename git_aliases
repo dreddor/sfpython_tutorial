@@ -6,7 +6,7 @@ git myAlias => git myArgs
 alias.grog log --graph --abbrev-commit --decorate --all --format=format:"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green) (%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)"
 
 # List all files under version control in the master branch
-alias.list ls-tree -r master
+alias.list ls-tree -r master --name-only
 
 # If you want to undo your changes, but stash them for later... git staaash, or just: git stash -all
 alias.staaash stash -all
