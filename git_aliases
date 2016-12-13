@@ -1,0 +1,18 @@
+Define git aliases, like this alias myAlias:
+git config --global alias.myAlias 'myArgs'
+git myAlias => git myArgs
+
+# Try git log, and then try git grog. :)
+alias.grog log --graph --abbrev-commit --decorate --all --format=format:"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green) (%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)"
+
+# If you're working on something, but want to stash it for later... git staaash, or just: git stash -all
+alias.staaash stash -all
+
+# Svn-style more compact status
+alias.shorty status --short --branch
+
+# Stage all files for commit
+alias.addy add -A
+
+# Get all of your currently defined aliases
+alias.alias config --get-regexp ^alias\.
